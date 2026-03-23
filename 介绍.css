@@ -1,9 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 html,body{
     height: 100%;
+    overflow-x: hidden;
 }
 body{
    background-color: rgb(78, 77, 77)
@@ -23,6 +25,7 @@ background: url(002.png) repeat center;
     height: 400px;
     display: flex;
     transition: all 1s ease;
+    overflow:hidden;
 }
 .bac:hover{
     transform: translateX(10px);
@@ -58,4 +61,41 @@ transition: all 1s ease;
 .img2:hover{
     opacity: 0.9;
     transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .text1 {
+        font-size: 40px;
+        padding: 10px;
+        padding-bottom: 5px;
+    }
+    
+    .text2 {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 50px;
+    }
+    
+    .img1 {
+        column-count: 2;
+        padding: 20px;
+        column-gap: 15px;
+    }
+    .img1 img {
+        border: 3px solid gray;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .text1 {
+        font-size: 35px;
+    }
+    
+    .img1 {
+        column-count: 1;
+        padding: 25px;
+    }
+   
 }
